@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 import sys
-import MainWinverticalLayout
+import MainWinline
 
-from PyQt5.QtWidgets import QApplication,QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow
 
 if __name__=='__main__':
     app = QApplication(sys.argv)
     mainWindow = QMainWindow()
-    ui = MainWinverticalLayout.Ui_MainWindow()
-    #  向主窗口上添加控件D
+    ui = MainWinline.Ui_MainWindow()
+    #  向主窗口上添加控件
     ui.setupUi(mainWindow)
     mainWindow.show()
     sys.exit(app.exec())

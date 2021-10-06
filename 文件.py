@@ -129,15 +129,15 @@ class MainGUI(QtWidgets.QMainWindow):
         title = ['部门', '部门编号', '时间', '业务类型', '品种', '数量', '单价', '金额', '额外值',
                  '调整', '剩余', '库位', '操作员', '领取日期', '领取时间', '领取次数']
 
-        wb = Workbook()
-        ws = wb.active
-        ws.merge_cells("A1:P1")
-        ws.cell(1, 1).value = "领料明细汇总表"
+        wb = Workbook()  # 创建新的工作薄
+        ws = wb.active  # 当前工作表
+        ws.merge_cells("A1:P1")  # 合并单元格
+        ws.cell(1, 1).value = "领料明细汇总表"  # 选择单元格.值
         ws.cell(1, 1).font = Font(name=u'黑体', bold=True, size=18)
-        ws.row_dimensions[1].height = 22.2
+        ws.row_dimensions[1].height = 22.2  # 行高
         ws.cell(
             1,
-            1).alignment = Alignment(
+            1).alignment = Alignment(  # 对齐
             horizontal="center",
             vertical="center")
         ws.append(title)
@@ -179,7 +179,7 @@ class MainGUI(QtWidgets.QMainWindow):
 def main():
     # [固定写法]实例化应用，sys.argv是一个从程序外部获取参数的桥梁
     app = QtWidgets.QApplication(sys.argv)
-    app.setWindowIcon(QIcon("PO.ico"))  # 设置界面左上角图标
+    app.setWindowIcon(QIcon("dog.jpg"))  # 设置界面左上角图标
     gui = MainGUI()  # [固定写法]调用MainGUI类
     gui.show()  # [固定写法]显示窗口
     sys.exit(app.exec_())  # [固定写法]调用exec_()方法运行程序。sys.exit()用于程序的正常退出
