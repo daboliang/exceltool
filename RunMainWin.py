@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 import sys
-import MainWinline
+import MainWintest
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 if __name__=='__main__':
     app = QApplication(sys.argv)
     mainWindow = QMainWindow()
-    ui = MainWinline.Ui_MainWindow()
+    ui = MainWintest.Ui_MainWindow()
     #  向主窗口上添加控件
     ui.setupUi(mainWindow)
     mainWindow.show()
