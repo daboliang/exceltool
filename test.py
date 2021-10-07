@@ -11,22 +11,18 @@ class FirstMainWin(QMainWindow):
 
     def initUI(self):
 
-        self.setGeometry(300, 300, 250, 250)
+        self.setGeometry(1000, 300, 400, 500)
         # 设置主窗口的标题
         self.setWindowTitle('第一个主窗口应用')
-
-        # 设置窗口的尺寸
-        self.resize(400, 300)
-
-        self.status = self.statusBar()
-        self.status.showMessage('只存在5秒的信息', 5000)
+        # 设置窗口的图标
+        self.setWindowIcon(QIcon('./dog.jpg'))
 
 
 if __name__ == '__main__':
     # 创建QApplication类的实例
     app = QApplication(sys.argv)
 
-    app.setWindowIcon(QIcon('./dog.jpg'))
+    #app.setWindowIcon(QIcon('./dog.jpg'))
     main = FirstMainWin()
     main.show()
 
